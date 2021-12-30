@@ -22,8 +22,7 @@
             tools:src="@tools:sample/avatars"
             app:layout_constraintDimensionRatio="H,1:1"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:contentDescription="TODO" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/nameShop"
@@ -109,14 +108,16 @@
 
         <Button
             android:id="@+id/buyItem"
-            android:layout_width="175dp"
-            android:layout_height="48dp"
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
             android:layout_marginStart="5dp"
-            android:background="@drawable/background"
+            android:background="@color/black"
             android:paddingVertical="1dp"
             android:text="@string/buyItem"
             android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/imageShop"
             app:layout_constraintTop_toBottomOf="@+id/discount" />
 
