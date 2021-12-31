@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import com.example.gameb.R
 import com.example.gameb.databinding.ActivityMainBinding
+import com.example.gameb.fragment.GamesFragment
 import com.example.gameb.fragment.ShopsFragment
 
 
@@ -24,7 +25,7 @@ class MainActivity : FragmentActivity() {
         setContentView(binding.root)
 
         if (savedInstanceState == null) {
-            navigateToFragment(ShopsFragment.NewInstance())
+            navigateToFragment(GamesFragment.NewInstance())
         }
     }
 }

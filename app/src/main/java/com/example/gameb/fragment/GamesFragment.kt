@@ -13,7 +13,7 @@ import com.example.gameb.databinding.FragmentGamesBinding
 
 class GamesFragment : Fragment(R.layout.fragment_games) {
     companion object {
-        fun NewInstance() = GamesFragment }
+        fun NewInstance() = GamesFragment() }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -22,7 +22,10 @@ class GamesFragment : Fragment(R.layout.fragment_games) {
 
         binding.rvGames.layoutManager = LinearLayoutManager(requireContext())
         binding.rvGames.adapter = GameAdapter(DataSource.Game) {
-            (activity as MainActivity).navigateToFragment(ShopsFragment.NewInstance())
+            (activity as MainActivity).navigateToFragment(ProductFragment.NewInstance())
+        }
+        binding.imageProfile.setOnClickListener {
+            (activity as MainActivity).navigateToFragment(ProfileFragment.newInstance())
         }
     }
 }
